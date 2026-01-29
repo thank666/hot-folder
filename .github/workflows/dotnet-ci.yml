@@ -1,0 +1,33 @@
+name: .NET CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Get code
+    - uses: actions/checkout@v4
+
+    # 2. Setup .NET 10
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    # 3. Restore
+    - name: Restore dependencies
+      run: dotnet restore HotFolder.slnx
+
+    # 4. Build
+    - name: Build
+      run: dotnet build HotFolder.slnx --no-restore
+
+    # 5. Test
+    - name: Test
+      run: dotnet test HotFolder.slnx --no-build --verbosity normal
