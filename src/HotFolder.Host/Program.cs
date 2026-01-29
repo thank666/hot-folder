@@ -1,10 +1,8 @@
-using HotFolder.Host;
-
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddWindowsService(options =>
 {
-    options.ServiceName = "HotFolderService"
+    options.ServiceName = "HotFolderService";
 });
 
 var host = builder.Build();
