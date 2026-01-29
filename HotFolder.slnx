@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/HotFolder.Application/HotFolder.Application.csproj" Id="9560007e-993b-425c-9111-d78d8c903b65" />
+  <Project Path="src/HotFolder.Domain/HotFolder.Domain.csproj" Id="3fe10301-840c-4221-871b-1807ae83af69" />
+  <Project Path="src/HotFolder.Host/HotFolder.Host.csproj" Id="bea3988d-ab18-4086-94d4-f6cb3e85f70f" />
+  <Project Path="src/HotFolder.Infrastructure/HotFolder.Infrastructure.csproj" Id="c49698cb-93f1-4683-a81c-79ef9cef0ec8" />
+</Solution>
